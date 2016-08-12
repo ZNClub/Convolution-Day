@@ -1,5 +1,4 @@
 
-
 def linear(x,h):
     lx=len(x)
     lh=len(h)
@@ -24,11 +23,15 @@ def linear(x,h):
                 mat[i].insert(j,mat[i][0]*mat[0][j])
                 del mat[i][j+1]
         print mat[i]
-        y=[]
-        for i in range(1,lx+1):
-            for j in range(1,lh+1):
+    y={2:0,3:0,4:0,5:0,6:0,7:0,8:0}
+    exit=False
+    for i in range(1,lx+1):
+        for j in range(1,lh+1):
+            if i!=0 or j!=0:
+                yl[i+j]=mat[i][j]
+    print yl        
+        
                 
-
 if __name__=="__main__":
     #x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
     x=[1,2,3,1]

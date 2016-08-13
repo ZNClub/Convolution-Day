@@ -24,12 +24,14 @@ def linear(x,h):
                 del mat[i][j+1]
         print mat[i]
     y={2:0,3:0,4:0,5:0,6:0,7:0,8:0}
-    exit=False
+    
     for i in range(1,lx+1):
         for j in range(1,lh+1):
             if i!=0 or j!=0:
-                yl[i+j]=mat[i][j]
-    print yl        
+                
+                y[i+j]=mat[i][j]
+                #print y[i+j],i,j
+    print y      
         
                 
 if __name__=="__main__":

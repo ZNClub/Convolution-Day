@@ -33,13 +33,17 @@ def linear(x,h):
                 #print y[i+j],i,j
     print y      
         
-                
+### start point of program
 if __name__=="__main__":
+    ### Read values of input response X(n) from user
     #x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
     x=[1,2,3,1]
+    
+    ### Read values of impulse response H(n) from user
     #h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
     h=[2,3,-1,1]
     
+    ### perform linear convolution
     linear(x,h)
     
     

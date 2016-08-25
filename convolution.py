@@ -1,3 +1,21 @@
+import pandas as pd
+import json as js
+
+global_json_obj=""
+d=dict()
+
+def result_in_json(key,value,final):
+    #json = ""+key+":'"+str(value)+"'"
+    #dump = js.dumps(value)
+    d[key]=value      
+    dump = js.dumps(d,sort_keys=True,indent=2)
+    print(dump)
+    
+    if final:
+        with open("circular.json","w") as fp:
+            js.dump(d,fp)
+    
+    
 
 def reverse(arg):
     if isinstance(arg,list):
@@ -110,6 +128,8 @@ def circular(x,h):
             rh=right_shift(rh)
             mat_h.append(rh)
     print(mat_h)
+    result_in_json("x(n)",x,True)
+    #result_in_json("matrix_h",mat_h)
     return
     
         

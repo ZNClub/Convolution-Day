@@ -13,8 +13,8 @@ def right_shift(rh):
            temp.append(rh[-1])
         else:
             temp.append(rh[i-1])
-    print(rh,temp)
-    return
+    #print(rh,temp)
+    return temp
 
 ### linear convolution by matrix method
 def linear(x,h):
@@ -90,7 +90,8 @@ def circular(x,h):
     print(x,h)
     
     
-    mat_h=[[0 for i in range(lh)] for j in range(lh)]
+    #mat_h=[[0 for i in range(lh)] for j in range(lh)]
+    mat_h=[]
     print(mat_h)
     
     ### form mat h
@@ -100,7 +101,15 @@ def circular(x,h):
     
     ### form matrix by circular right shift each row in each iteration
     rh=right_shift(rh)
-    
+    mat_h.append(rh)
+    for i in range(lh):
+        
+        if i==lh-1:
+            break
+        else:
+            rh=right_shift(rh)
+            mat_h.append(rh)
+    print(mat_h)
     return
     
         
@@ -108,11 +117,11 @@ def circular(x,h):
 #if __name__=="__main__":
 ### Read values of input response x(n) from user
 #x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
-x=[1,2,3,1]
+x=[1,2,3]
 
 ### Read values of impulse response h(n) from user
 #h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
-h=[2,3,-1]
+h=[4,3,2,2]
 
 ### perform linear convolution
 #linear(x,h)

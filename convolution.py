@@ -38,7 +38,8 @@ def linear(x,h):
                 mat[i].insert(j,mat[i][0]*mat[0][j])
                 del mat[i][j+1]
         ### display matrix row by row
-        print mat[i]
+        #print mat[i]
+        print(mat[i])
     
     ### initialize output response y(n)
     y={2:0,3:0,4:0,5:0,6:0,7:0,8:0}
@@ -50,20 +51,26 @@ def linear(x,h):
                 
                 y[i+j]=mat[i][j]
                 #print y[i+j],i,j
-    print y      
+    print(y)
+
+def circular(x,h):
+    return
+    
         
 ### start point of program
-if __name__=="__main__":
-    ### Read values of input response x(n) from user
-    #x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
-    x=[1,2,3,1]
-    
-    ### Read values of impulse response h(n) from user
-    #h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
-    h=[2,3,-1,1]
-    
-    ### perform linear convolution
-    linear(x,h)
-    
+#if __name__=="__main__":
+### Read values of input response x(n) from user
+#x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
+x=[1,2,3,1]
+
+### Read values of impulse response h(n) from user
+#h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
+h=[2,3,-1,1]
+
+### perform linear convolution
+#linear(x,h)
+
+### perform linear convolution
+circular(x,h)
     
     

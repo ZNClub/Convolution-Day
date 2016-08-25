@@ -54,6 +54,12 @@ def linear(x,h):
     print(y)
     return
 
+def reverse(arg):
+    if isinstance(arg,list):
+        arg.reverse()
+        return arg
+    return
+
 def circular(x,h):
     lx = len(x)
     lh = len(h)
@@ -71,8 +77,13 @@ def circular(x,h):
     print(x,h)
     
     
-    mat=[[0 for i in range(lh)] for j in range(lh)]
-    print(mat)
+    mat_h=[[0 for i in range(lh)] for j in range(lh)]
+    print(mat_h)
+    
+    ### form mat
+    print(type(h))
+    rh=reverse(h)
+    print(rh)
     
     return
     

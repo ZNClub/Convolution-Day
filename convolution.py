@@ -52,8 +52,21 @@ def linear(x,h):
                 y[i+j]=mat[i][j]
                 #print y[i+j],i,j
     print(y)
+    return
 
 def circular(x,h):
+    lx = len(x)
+    lh = len(h)
+    if lx>lh:
+        d=lx-lh
+        for i in range(d):
+            h.append(0)
+    elif lh>lx:
+        d=lh-lx
+        for i in range(d):
+            x.append(0)
+    print(x,h)
+    
     return
     
         
@@ -65,7 +78,7 @@ x=[1,2,3,1]
 
 ### Read values of impulse response h(n) from user
 #h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
-h=[2,3,-1,1]
+h=[2,3,-1]
 
 ### perform linear convolution
 #linear(x,h)

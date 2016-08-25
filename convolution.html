@@ -1,5 +1,5 @@
 
-<body ng-app="countryApp" ng-controller="CountryCtrl">
+  <body ng-app="countryApp" ng-controller="CountryCtrl">
     <table>
       <tr>
         <th>Country</th>
@@ -9,18 +9,10 @@
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
       </tr>
-    </table>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-    <script>
-      var countryApp = angular.module('countryApp', []);
-      countryApp.controller('CountryCtrl', function ($scope){
-        $scope.countries = [
-          {"name": "China", "population": 1359821000},
-          {"name": "India", "population": 1205625000},
-          {"name": "United States of America","population": 312247000}
-        ];
-      });
-    </script>
-    
+    </table>            
+		
+		<!-- scripts -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		
   </body>
+	

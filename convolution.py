@@ -1,3 +1,21 @@
+
+def reverse(arg):
+    if isinstance(arg,list):
+        arg.reverse()
+        return arg
+    return
+
+def right_shift(rh):    
+    temp=[]
+    lrh = len(rh)
+    for i in range(lrh):
+        if i==0:
+           temp.append(rh[-1])
+        else:
+            temp.append(rh[i-1])
+    print(rh,temp)
+    return
+
 ### linear convolution by matrix method
 def linear(x,h):
     ### get length of x(n)
@@ -53,12 +71,7 @@ def linear(x,h):
                 #print y[i+j],i,j
     print(y)
     return
-
-def reverse(arg):
-    if isinstance(arg,list):
-        arg.reverse()
-        return arg
-    return
+    
 
 def circular(x,h):
     lx = len(x)
@@ -80,10 +93,13 @@ def circular(x,h):
     mat_h=[[0 for i in range(lh)] for j in range(lh)]
     print(mat_h)
     
-    ### form mat
-    print(type(h))
+    ### form mat h
+    
     rh=reverse(h)
-    print(rh)
+    #print(rh)
+    
+    ### form matrix by circular right shift each row in each iteration
+    rh=right_shift(rh)
     
     return
     

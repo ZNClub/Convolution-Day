@@ -1,15 +1,6 @@
 
   <body ng-app="countryApp" ng-controller="CountryCtrl">
-    <table>
-      <tr>
-        <th>Country</th>
-        <th>Population</th>
-      </tr>
-      <tr ng-repeat="country in countries">
-        <td>{{country.name}}</td>
-        <td>{{country.population}}</td>
-      </tr>
-    </table>            
+  <li ng-repeat="(signal, points) in con">{{signal}}: {{points}}</li> 
 		
 		<!-- scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>

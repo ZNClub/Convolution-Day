@@ -57,15 +57,22 @@ def linear(x,h):
 def circular(x,h):
     lx = len(x)
     lh = len(h)
+    
     if lx>lh:
         d=lx-lh
         for i in range(d):
             h.append(0)
+        lh = len(h)
     elif lh>lx:
         d=lh-lx
         for i in range(d):
             x.append(0)
+        lx = len(x)
     print(x,h)
+    
+    
+    mat=[[0 for i in range(lh)] for j in range(lh)]
+    print(mat)
     
     return
     

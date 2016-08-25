@@ -1,10 +1,7 @@
 
 var countryApp = angular.module('countryApp', []);
-countryApp.controller('CountryCtrl', function ($scope){
-  $scope.countries = [
-    {"name": "China", "population": 1359821000},
-    {"name": "India", "population": 1205625000},
-    {"name": "United States of America","population": 312247000}
-  ];
-});
-
+      countryApp.controller('CountryCtrl', function ($scope, $http){
+        $http.get('https://raw.githubusercontent.com/ZNClub/Convolution-Day/master/circular.json').success(function(data) {
+          $scope.countries = data;
+        });
+      });

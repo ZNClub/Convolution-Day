@@ -128,7 +128,8 @@ def circular(x,h):
             rh=right_shift(rh)
             mat_h.append(rh)
     print(mat_h)
-    result_in_json("x(n)",x,True)
+    result_in_json("x(n)",x,False)
+    result_in_json("h(n)",h,True)
     #result_in_json("matrix_h",mat_h)
     return
     

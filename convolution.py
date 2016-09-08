@@ -1,5 +1,5 @@
-import pandas as pd
-import json as js
+#import pandas as pd
+#import json as js
 
 global_json_obj=""
 d=dict()
@@ -128,17 +128,23 @@ def circular(x,h):
             rh=right_shift(rh)
             mat_h.append(rh)
     print(mat_h)
-    result_in_json("x(n)",x,False)
-    result_in_json("h(n)",h,True)
+    #result_in_json("x(n)",x,False)
+    #result_in_json("h(n)",h,True)
     #result_in_json("matrix_h",mat_h)
-    return
     
-        
+    ### matrix multiplication
+    result=[]
+    for i in range(lx):
+        temp=0
+        for j in range(lx):
+            temp+=mat_h[i][j]*x[j]
+        result.append(temp)
+    print(result)
 ### start point of program
 #if __name__=="__main__":
 ### Read values of input response x(n) from user
 #x = raw_input("Enter values of x(n){Ex:1,2,3}").split(",")
-x=[1,2,3]
+x=[1,2,3,1]
 
 ### Read values of impulse response h(n) from user
 #h = raw_input("Enter values of h(n){Ex:2,3}").split(",")
